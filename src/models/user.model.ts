@@ -1,5 +1,5 @@
 import { v4 as createUuid } from "uuid";
-import { Replie } from "./reply";
+import { Reply } from "./reply";
 import { TweetBase } from "./tweetBase";
 import { Like } from "./like";
 import { Follow } from "./follow";
@@ -9,8 +9,8 @@ export class User {
   private _id: string;
   private _enable: boolean;
   public tweet: TweetBase[];
-  public retweet:Retweet[];
-  public replie: Replie[];
+  public retweet: Retweet[];
+  public replie: Reply[];
   public likes: Like[];
   public followers: Follow[]; // Lista de IDs dos seguidores do usuário
   public following: Follow[];
@@ -23,7 +23,7 @@ export class User {
     this._id = createUuid();
     this._enable = true;
     this.tweet = [];
-    this.retweet=[];
+    this.retweet = [];
     this.replie = [];
     this.likes = [];
     this.followers = [];
