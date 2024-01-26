@@ -5,7 +5,7 @@
   "description": "",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only ./src/server.ts",
-    "build": "tsc",
+    "dist": "tsc && webpack",
     "test": "jest --silent --noStackTrace --runInBand",
     "test:verbose": "jest --verbose --runInBand --detectOpenHandles",
     "test:coverage": "jest --runInBand --coverage",
